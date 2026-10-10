@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="E-Commerce Dashboard 2024 สรุปยอดขายรายเดือน">
+  <title>E-Commerce Dashboard 2024</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-content">
+      <p class="eyebrow">DATA VISUALIZATION</p>
+      <h1>E-Commerce Dashboard 2024</h1>
+      <p class="subtitle">ภาพรวมผลประกอบการร้านค้าออนไลน์ตลอดปี 2024</p>
+    </div>
+  </header>
+
+  <main class="dashboard">
+    <section class="intro" aria-labelledby="overview-title">
+      <h2 id="overview-title">ภาพรวมผลประกอบการ</h2>
+      <p>สรุปตัวชี้วัดสำคัญจากข้อมูลยอดขายที่ผ่านการทำความสะอาดแล้ว</p>
+    </section>
+
+    <section class="kpis" aria-label="ตัวชี้วัดสำคัญ">
+      <article class="kpi-card">
+        <div class="kpi-icon" aria-hidden="true">฿</div>
+        <p class="kpi-label">ยอดขายรวมทั้งปี</p>
+        <p class="kpi-value">฿24.5M</p>
+        <p class="kpi-note">Revenue รวม 24,537,800 บาท</p>
+      </article>
+
+      <article class="kpi-card">
+        <div class="kpi-icon" aria-hidden="true">↗</div>
+        <p class="kpi-label">เดือนที่ขายดีที่สุด</p>
+        <p class="kpi-value">Nov</p>
+        <p class="kpi-note">ยอดขายสูงสุด ฿3,643,200</p>
+      </article>
+
+      <article class="kpi-card">
+        <div class="kpi-icon" aria-hidden="true">◎</div>
+        <p class="kpi-label">AOV เฉลี่ย</p>
+        <p class="kpi-value">~฿1,285</p>
+        <p class="kpi-note">มูลค่าคำสั่งซื้อเฉลี่ยโดยประมาณ</p>
+      </article>
+    </section>
+
+    <section class="panel chart" aria-labelledby="chart-title">
+      <div class="panel-heading">
+        <div>
+          <h2 id="chart-title">ยอดขายรายเดือน</h2>
+          <p>Monthly Revenue · 2024</p>
+        </div>
+        <span class="status">Chart placeholder</span>
+      </div>
+      <div class="svg-chart-wrap"><svg class="revenue-chart" viewBox="0 0 720 360" role="img" aria-labelledby="revenue-title revenue-desc">
+        <title id="revenue-title">กราฟแท่งยอดขายรายเดือน ปี 2024</title><desc id="revenue-desc">ยอดขายรายเดือน เดือนพฤศจิกายนสูงสุดที่ 3,643,200 บาท เน้นด้วยสีอำพัน</desc>
+        <g class="grid-lines" aria-hidden="true">
+<line x1="58" y1="286" x2="700" y2="286"/>
+<line x1="58" y1="224" x2="700" y2="224"/>
+<line x1="58" y1="162" x2="700" y2="162"/>
+<line x1="58" y1="100" x2="700" y2="100"/>
+<line x1="58" y1="38" x2="700" y2="38"/>
+</g><g class="axis-labels" aria-hidden="true">
+<text x="48" y="290" text-anchor="end">0</text>
+<text x="48" y="228" text-anchor="end">1M</text>
+<text x="48" y="166" text-anchor="end">2M</text>
+<text x="48" y="104" text-anchor="end">3M</text>
+<text x="48" y="42" text-anchor="end">4M</text>
+</g><g class="bars">
+<rect class="bar" x="72" y="219" width="34" height="67" rx="4"><title>Jan: ฿1,080,000</title></rect>
+<rect class="bar" x="124" y="254" width="34" height="32" rx="4"><title>Feb: ฿520,000</title></rect>
+<rect class="bar" x="176" y="208" width="34" height="78" rx="4"><title>Mar: ฿1,260,000</title></rect>
+<rect class="bar" x="228" y="184" width="34" height="102" rx="4"><title>Apr: ฿1,650,000</title></rect>
+<rect class="bar" x="280" y="174" width="34" height="112" rx="4"><title>May: ฿1,808,500</title></rect>
+<rect class="bar" x="332" y="154" width="34" height="132" rx="4"><title>Jun: ฿2,130,000</title></rect>
+<rect class="bar" x="384" y="145" width="34" height="141" rx="4"><title>Jul: ฿2,275,000</title></rect>
+<rect class="bar" x="436" y="152" width="34" height="134" rx="4"><title>Aug: ฿2,167,200</title></rect>
+<rect class="bar" x="488" y="130" width="34" height="156" rx="4"><title>Sep: ฿2,520,000</title></rect>
+<rect class="bar" x="540" y="96" width="34" height="190" rx="4"><title>Oct: ฿3,070,000</title></rect>
+<rect class="bar bar-peak" x="592" y="60" width="34" height="226" rx="4"><title>Nov: ฿3,643,200</title></rect>
+<rect class="bar" x="644" y="177" width="34" height="109" rx="4"><title>Dec: ฿1,760,000</title></rect>
+</g><g class="month-labels" aria-hidden="true">
+<text x="89" y="310" text-anchor="middle">Jan</text>
+<text x="141" y="310" text-anchor="middle">Feb</text>
+<text x="193" y="310" text-anchor="middle">Mar</text>
+<text x="245" y="310" text-anchor="middle">Apr</text>
+<text x="297" y="310" text-anchor="middle">May</text>
+<text x="349" y="310" text-anchor="middle">Jun</text>
+<text x="401" y="310" text-anchor="middle">Jul</text>
+<text x="453" y="310" text-anchor="middle">Aug</text>
+<text x="505" y="310" text-anchor="middle">Sep</text>
+<text x="557" y="310" text-anchor="middle">Oct</text>
+<text x="609" y="310" text-anchor="middle">Nov</text>
+<text x="661" y="310" text-anchor="middle">Dec</text>
+</g><path class="peak-pointer" d="M609 54 L609 32" aria-hidden="true"/><text class="peak-label" x="609" y="22" text-anchor="middle">PEAK · ฿3.64M</text></svg></div><p class="chart-caption">ยอดขายสูงสุดอยู่ในเดือนพฤศจิกายน 2024 ที่ ฿3,643,200</p>
+    </section>
+
+    <section class="panel insights" aria-labelledby="insights-title">
+      <h2 id="insights-title">Key Insights</h2>
+      <ul>
+        <li>ยอดขายรวมทั้งปีอยู่ที่ประมาณ 24.5 ล้านบาท</li>
+        <li>เดือนพฤศจิกายนเป็นเดือนที่มียอดขายสูงสุด</li>
+        <li>ควรเปรียบเทียบยอดขายรายเดือนเพื่อวางแผนแคมเปญ</li>
+      </ul>
+    </section>
+    
+<section class="insights" aria-labelledby="insights-title">
+  <h2 id="insights-title">Key Takeaways</h2>
+  <ul>
+    <li>ยอดขายรวมทั้งปีอยู่ที่ ฿24,537,800</li>
+    <li>พฤศจิกายนเป็นเดือนที่มียอดขายสูงสุด ฿3,643,200</li>
+    <li>ควรศึกษาปัจจัยที่ส่งผลให้ยอดขายเดือนพฤศจิกายนสูงขึ้น</li>
+  </ul>
+  <p class="chart-note">
+    พฤศจิกายนมียอดขายสูงสุดเมื่อเทียบกับเดือนอื่นในปี 2024
+  </p>
+</section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2024 • 01219482 Data Visualization</p>
+    <p>จัดทำเพื่อการศึกษา</p>
+  </footer>
+</body>
+</html>

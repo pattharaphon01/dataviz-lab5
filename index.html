@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="E-Commerce Dashboard 2024 สรุปยอดขายรายเดือน">
+  <title>E-Commerce Dashboard 2024</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-content">
+      <p class="eyebrow">DATA VISUALIZATION</p>
+      <h1>E-Commerce Dashboard 2024</h1>
+      <p class="subtitle">ภาพรวมผลประกอบการร้านค้าออนไลน์ตลอดปี 2024</p>
+    </div>
+  </header>
+
+  <main class="dashboard">
+    <section class="intro" aria-labelledby="overview-title">
+      <h2 id="overview-title">ภาพรวมผลประกอบการ</h2>
+      <p>สรุปตัวชี้วัดสำคัญจากข้อมูลยอดขายที่ผ่านการทำความสะอาดแล้ว</p>
+    </section>
+
+    <section class="kpis" aria-label="ตัวชี้วัดสำคัญ">
+      <article class="kpi-card">
+        <div class="kpi-icon" aria-hidden="true">฿</div>
+        <p class="kpi-label">ยอดขายรวมทั้งปี</p>
+        <p class="kpi-value">฿24.5M</p>
+        <p class="kpi-note">Revenue รวม 24,537,800 บาท</p>
+      </article>
+
+      <article class="kpi-card">
+        <div class="kpi-icon" aria-hidden="true">↗</div>
+        <p class="kpi-label">เดือนที่ขายดีที่สุด</p>
+        <p class="kpi-value">Nov</p>
+        <p class="kpi-note">ยอดขายสูงสุด ฿3,643,200</p>
+      </article>
+
+      <article class="kpi-card">
+        <div class="kpi-icon" aria-hidden="true">◎</div>
+        <p class="kpi-label">AOV เฉลี่ย</p>
+        <p class="kpi-value">~฿1,285</p>
+        <p class="kpi-note">มูลค่าคำสั่งซื้อเฉลี่ยโดยประมาณ</p>
+      </article>
+    </section>
+
+    <section class="panel chart" aria-labelledby="chart-title">
+      <div class="panel-heading">
+        <div>
+          <h2 id="chart-title">ยอดขายรายเดือน</h2>
+          <p>Monthly Revenue · 2024</p>
+        </div>
+        <span class="status">Chart placeholder</span>
+      </div>
+      <div class="chart-placeholder" role="img" aria-label="พื้นที่สำหรับแสดงกราฟแท่งยอดขายรายเดือน ซึ่งจะเพิ่มใน Mini-Lab 2">
+        <div class="placeholder-icon" aria-hidden="true">▥</div>
+        <p>Chart coming soon</p>
+        <span>กราฟแท่ง SVG จะถูกเพิ่มใน Mini-Lab 2</span>
+      </div>
+    </section>
+
+    <section class="panel insights" aria-labelledby="insights-title">
+      <h2 id="insights-title">Key Insights</h2>
+      <ul>
+        <li>ยอดขายรวมทั้งปีอยู่ที่ประมาณ 24.5 ล้านบาท</li>
+        <li>เดือนพฤศจิกายนเป็นเดือนที่มียอดขายสูงสุด</li>
+        <li>ควรเปรียบเทียบยอดขายรายเดือนเพื่อวางแผนแคมเปญ</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2024 • 01219482 Data Visualization</p>
+    <p>จัดทำเพื่อการศึกษา</p>
+  </footer>
+
+  <script>
+    // Pass one record per order: { month: "Nov", revenue: 1234 }.
+    function calculateRevenueMetrics(orders) {
+      const monthlyRevenue = new Map();
+      let totalRevenue = 0;
+      let validOrderCount = 0;
+
+      for (const order of orders) {
+        const revenue = Number(order.revenue);
+        if (!order.month || !Number.isFinite(revenue)) continue;
+
+        totalRevenue += revenue;
+        validOrderCount += 1;
+        monthlyRevenue.set(
+          order.month,
+          (monthlyRevenue.get(order.month) || 0) + revenue
+        );
+      }
+
+      let peakMonth = null;
+      let peakRevenue = 0;
+      for (const [month, revenue] of monthlyRevenue) {
+        if (peakMonth === null || revenue > peakRevenue) {
+          peakMonth = month;
+          peakRevenue = revenue;
+        }
+      }
+
+      return {
+        totalRevenue,
+        peakMonth,
+        peakRevenue,
+        averageRevenue: validOrderCount ? totalRevenue / validOrderCount : 0
+      };
+    }
+  </script>
+</body>
+</html>
